@@ -1,0 +1,10 @@
+[
+    { "id": "1", "nome": "Lorena", "valorFixoContrato": 595, "contratos": [] },
+    { "id": "2", "nome": "Leticia", "valorFixoContrato": 420, "contratos": [] },
+    { "id": "3", "nome": "Deived", "valorFixoContrato": 682, "contratos": [] },
+    { "id": "4", "nome": "Josue", "valorFixoContrato": 548, "contratos": [] },
+    { "id": "5", "nome": "Matheus", "valorFixoContrato": 1205, "contratos": [] },
+    { "id": "6", "nome": "Maria Vitoria", "valorFixoContrato": 464, "contratos": [] },
+    { "id": "7", "nome": "Rodrigo", "valorFixoContrato": 510, "contratos": [] }
+  ]
+  

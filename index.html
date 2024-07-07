@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Prestações de Serviço</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Prestações de Serviço</h1>
+    
+    <div id="mensagem" class="mensagem"></div>
+    
+    <div id="dashboard" class="dashboard">
+      <h2>Resumo dos Prestadores de Serviço</h2>
+      <div id="resumo-prestadores"></div>
+    </div>
+
+    <form id="prestador-form" class="form-section">
+      <h2>Dados do Prestador de Serviço</h2>
+      <label for="nome">Nome do Prestador:</label>
+      <input type="text" id="nome" required>
+      <label for="valor-fixo">Valor Fixo por Contrato (R$):</label>
+      <input type="number" id="valor-fixo" required>
+      <button type="button" id="add-prestador" class="btn-primary">Adicionar Prestador</button>
+    </form>
+
+    <form id="contrato-form" class="form-section">
+      <h2>Dados do Contrato</h2>
+      <label for="prestador">Prestador de Serviço:</label>
+      <select id="prestador" required>
+        <option value="">Nenhum</option>
+      </select>
+      <label for="cliente">Nome do Cliente:</label>
+      <select id="cliente" required>
+        <option value="">Nenhum</option>
+      </select>
+      <label for="dias-trabalhados">Dias Trabalhados:</label>
+      <input type="number" id="dias-trabalhados" required>
+      <label for="data-contrato">Data do Contrato (Mês):</label>
+      <select id="data-contrato" required>
+        <option value="Janeiro">Janeiro</option>
+        <option value="Fevereiro">Fevereiro</option>
+        <option value="Março">Março</option>
+        <option value="Abril">Abril</option>
+        <option value="Maio">Maio</option>
+        <option value="Junho">Junho</option>
+        <option value="Julho">Julho</option>
+        <option value="Agosto">Agosto</option>
+        <option value="Setembro">Setembro</option>
+        <option value="Outubro">Outubro</option>
+        <option value="Novembro">Novembro</option>
+        <option value="Dezembro">Dezembro</option>
+      </select>
+      <button type="button" id="add-contrato" class="btn-primary">Adicionar Contrato</button>
+    </form>
+
+    <button type="button" id="gerar-extrato" class="btn-secondary">Gerar Extrato</button>
+    
+    <!-- Menu para Histórico de Contratos -->
+    <div class="menu">
+      <button type="button" id="open-historico-modal" class="btn-primary">Histórico de Contratos</button>
+    </div>
+
+    <!-- Modal para Histórico de Contratos -->
+    <div id="historico-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Histórico de Contratos</h2>
+        <select id="prestador-historico" required>
+          <option value="">Nenhum</option>
+        </select>
+        <div id="historico-prestador"></div>
+      </div>
+    </div>
+
+    <!-- Menu para Relatórios Personalizados -->
+    <div class="menu">
+      <button type="button" id="open-relatorio-modal" class="btn-primary">Relatórios Personalizados</button>
+    </div>
+
+    <!-- Modal para Relatórios Personalizados -->
+    <div id="relatorio-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Relatórios Personalizados</h2>
+        <form id="relatorio-form" class="form-section">
+          <label for="relatorio-prestador">Prestador de Serviço:</label>
+          <select id="relatorio-prestador">
+            <option value="">Todos</option>
+          </select>
+          <label for="relatorio-cliente">Cliente:</label>
+          <select id="relatorio-cliente">
+            <option value="">Todos</option>
+          </select>
+          <label for="relatorio-periodo">Período (Mês):</label>
+          <select id="relatorio-periodo">
+            <option value="">Todos</option>
+            <option value="Janeiro">Janeiro</option>
+            <option value="Fevereiro">Fevereiro</option>
+            <option value="Março">Março</option>
+            <option value="Abril">Abril</option>
+            <option value="Maio">Maio</option>
+            <option value="Junho">Junho</option>
+            <option value="Julho">Julho</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Setembro">Setembro</option>
+            <option value="Outubro">Outubro</option>
+            <option value="Novembro">Novembro</option>
+            <option value="Dezembro">Dezembro</option>
+          </select>
+          <button type="button" id="gerar-relatorio" class="btn-primary">Gerar Relatório</button>
+        </form>
+        <div id="relatorio-resultados"></div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
